@@ -1,22 +1,18 @@
-const slowo: string ="aabbaa";
-console.log(slowo);
-const l = slowo.length;
+const slowo: string = "aabbaa";
+const dlugosc = slowo.length;
 const tab: string[] = slowo.split("");
 console.log(tab);
-let k=(l-1);
-let p=0;
-for(let i=0;i<k;i++)
-{
-    if(tab[i] == tab[k] )
-    {
-         k=k-1;
+let litera = (dlugosc - 1);
+let palindrom = 0;
+for (let i = 0; i < litera; i++) {
+    if (tab[i] == tab[litera]) {
+        litera = litera - 1;
     }
-    else
-    {
-        p=1;
+    else {
+        palindrom = 1;
     }
 }
-if (p==0)
+if (palindrom == 0)
     console.log("jest palindormem");
 else
     console.log("nie jest palindormem");
