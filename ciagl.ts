@@ -1,21 +1,8 @@
-let l=5;
-let a=0;
-let b=1;
-for(let i=0;i<=l;i++)
-{
-    if(l==0)
-    {
-        b=b-1;
-        break;
-    }
-    if(l==1)
-    {
-        break;
-    }
-    else
-    {
-        b=a+b;
-        a=b-a;
-    }
+function ciag(n = 19) {
+    if (n == 1 || n == 2)
+        return 1;
+    if( n==0)
+        return 0;
+    return ciag(n - 2) + ciag(n - 1);
 }
-console.log(b);
+console.log(ciag());
